@@ -19,7 +19,7 @@ A model comparison project on the Heart Failure Clinical Records dataset (299 pa
 - **Feature selection helps, consistently.** A 4-feature model (chosen via ANOVA F-test, run on the training split only to avoid data leakage) matched or beat the full 11-feature version in every model family tested — most dramatically for KNN, whose recall collapsed from 0.52 to 0.14 with all 11 features included (the curse of dimensionality in action).
 - **Three independent methods agree.** ANOVA testing, domain-informed tiered mortality-rate analysis, and Kaplan-Meier survival curves all converged on the same two dominant risk markers: **serum creatinine** (kidney function) and **ejection fraction** (heart pumping efficiency).
 
-See the [full report](./Heart_Failure_Final_Report.docx) for detailed methodology, the complete model comparison table, and an honest account of the analytical issues caught and corrected along the way (a feature-selection leakage bug and a metric-gaming SVM collapse, among others).
+See the [full report](https://github.com/Prosper438/heart-failure-survival-prediction/blob/main/Report/Heart_Failure_Final_Report.docx) for detailed methodology, the complete model comparison table, and an honest account of the analytical issues caught and corrected along the way (a feature-selection leakage bug and a metric-gaming SVM collapse, among others).
 
 ## Running the notebook
 
