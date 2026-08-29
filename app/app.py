@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 import joblib
 import numpy as np
@@ -22,7 +24,7 @@ def load_artifacts():
     model = joblib.load(os.path.join(APP_DIR, "heart_failure_model.pkl"))
     scaler = joblib.load(os.path.join(APP_DIR, "heart_failure_scaler.pkl"))
     feature_order = joblib.load(os.path.join(APP_DIR, "heart_failure_features.pkl"))
-    return model, scaler, features
+    return model, scaler, feature_order
 
 model, scaler, feature_order = load_artifacts()
 
