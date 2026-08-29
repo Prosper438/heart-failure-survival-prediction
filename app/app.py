@@ -17,9 +17,11 @@ st.set_page_config(
 # ------------------------------------------------------------------
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("heart_failure_model.pkl")
-    scaler = joblib.load("heart_failure_scaler.pkl")
-    features = joblib.load("heart_failure_features.pkl")
+    APP_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    model = joblib.load(os.path.join(APP_DIR, "heart_failure_model.pkl"))
+    scaler = joblib.load(os.path.join(APP_DIR, "heart_failure_scaler.pkl"))
+    feature_order = joblib.load(os.path.join(APP_DIR, "heart_failure_features.pkl"))
     return model, scaler, features
 
 model, scaler, feature_order = load_artifacts()
